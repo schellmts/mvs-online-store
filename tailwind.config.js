@@ -5,7 +5,19 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        salmao: "#e63946",
+        brancoverdeado: "#f1faee",
+        littleblue: "#a8dadc",
+        azulmarinho: "#457b9d",
+        azulcobalto: "#1d3557",
+        quasebranco: "#f5f5f7",
+        cinzinha: "#eeeeee",
+        cinza: "#838383",
+      },
+      backgroundImage: {},
+    },
   },
   plugins: [],
 };
