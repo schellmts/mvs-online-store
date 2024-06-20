@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: ["./src/**/*.{html,ts}",
+  "./node_modules/flowbite/**/*.js"],
   theme: {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
     },
+    plugins: [
+      require('flowbite/plugin')
+    ],
     extend: {
       colors: {
         salmao: "#e63946",
