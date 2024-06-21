@@ -1,1 +1,81 @@
-<p>produtos-page works!</p>
+<div class="flex justify-center mx-auto max-w-screen-lg">
+    <div class="flex-1">
+      <div>
+        <h1>Camisas - Futebol</h1>
+      </div>
+      <!-- Departamento -->
+
+      <div></div> 
+      <!-- só aparece se for "new" -->
+
+      <div class="top">Camisa Barcelona 23/24 - Casa</div>
+      <!-- Nome do produto -->
+      <div class="flex flex-col">
+        <div>R$300,00</div>
+        <p>Em até 12x de R$28,90</p>
+        <div>R$ 270,00 à vista(10% de desconto)</div>
+      </div>
+      <!-- valor -->
+      <fieldset>
+        <legend>Tamanho - </legend>
+        <div>
+            <input type="radio" id="P" name="interest" value="P" />
+            <label for="P">P</label>
+        </div>
+        <div>
+            <input type="radio" id="M" name="interest" value="M" />
+            <label for="M">M</label>
+        </div>
+        <div>
+          <input type="radio" id="G" name="interest" value="G" />
+          <label for="G">G</label>
+      </div>
+      <div>
+        <input type="radio" id="GG" name="interest" value="GG" />
+        <label for="GG">GG</label>
+    </div>
+    <div>
+      <input type="radio" id="XG" name="interest" value="XG" />
+      <label for="XG">XG</label>
+  </div>
+    </fieldset>
+      <div class="flex flex-col">
+        <div class="border-l-black">Entrega:</div>
+        <div>Em estoque</div>
+        <div>Frete grátis</div>
+        <button>Ver datas de entrega</button>
+      </div>
+      
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Adicionar ao carrinho</button>
+      
+      <div>
+        <h1>Na Dúvida?</h1>
+        <div>Salve na lista de desejos para não esquecer e ter que procurar novamente entre as camisas de cada ano.</div>
+      </div>
+      <button>Salvar para mais tarde</button>
+    </div>
+    
+    <div class="flex-1">
+      <div class="card m-8">
+        <img class="h-80 w-64" id="mainImage" src="barca-tras.png" alt="Imagem Principal">
+      </div>
+  
+      <div class="thumbnails grid-flow-col">
+        <button onclick="document.getElementById('mainImage').src='barca.png'">
+          <img class="h-16 w-16 m-2" src="barca.png">
+        </button>
+        <button onclick="document.getElementById('mainImage').src='barca-tras.png'">
+          <img class="h-16 w-16 m-2" src="barca-tras.png">
+        </button>
+        <button onclick="document.getElementById('mainImage').src='barca.png'">
+          <img class="h-16 w-16 m-2" src="barca.png">
+        </button>
+        <button onclick="document.getElementById('mainImage').src='barca.png'">
+          <img class="h-16 w-16 m-2" src="barca.png">
+        </button>
+        <button onclick="document.getElementById('mainImage').src='barca.png'">
+          <img class="h-16 w-16 m-2" src="barca.png">
+        </button>
+      </div>
+    </div>
+  </div>
