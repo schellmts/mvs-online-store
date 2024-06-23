@@ -1,0 +1,11 @@
+<div>
+  <app-navbar></app-navbar>
+  <div class="container mx-auto text-3xl font-semibold mt-20">
+    <h1>Veja nossos principais produtos:</h1>
+
+    <div class="w-full grid grid-cols-3" *ngFor="let card of camisas">
+      <h1>{{card.nome}}</h1>
+    </div>
+  </div>
+</div>
+
