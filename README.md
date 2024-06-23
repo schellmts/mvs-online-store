@@ -1,5 +1,9 @@
 # MvpSports
 
+Links do Projeto:
+Figma: https://www.figma.com/design/Szr8wgjUl6BJzSccagZ4pu/MV-ESPORTES?node-id=0-1&t=qrBRywuAVPTbBZRJ-1
+Repositório do Github: https://github.com/schellmts/mvs-online-store
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
 ## Development server
