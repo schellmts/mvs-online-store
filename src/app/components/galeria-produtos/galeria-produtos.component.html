@@ -1,10 +1,10 @@
 <div>
   <app-navbar></app-navbar>
   <div class="container mx-auto text-3xl w-full font-semibold mt-20">
-    <h1>Veja nossos principais produtos:</h1>
+    <h1 class="px-6">Veja nossos principais produtos:</h1>
 
-    <div class="grid grid-cols-3 gap-6 p-6" *ngIf="camisas">
-      <div class="w-full" *ngFor="let card of camisas">
+    <div class="p-6 gap-6 flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3" *ngIf="camisas">
+      <div class="w-full flex flex-col justify-center items-center" *ngFor="let card of camisas">
 
 
         <div class="w-full max-w-sm bg-quasebranco rounded-lg">

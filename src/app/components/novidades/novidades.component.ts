@@ -12,8 +12,7 @@ import {CommonModule} from "@angular/common";
 export class NovidadesComponent implements OnInit{
   camisas: any[] = []
 
-  constructor(private apiServce: ApiService) {
-  }
+  constructor(private apiServce: ApiService) {}
 
   ngOnInit() {
     this.apiServce.getCamisas().subscribe(data => {
