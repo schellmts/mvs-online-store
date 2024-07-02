@@ -14,4 +14,8 @@ export class ApiService {
   getCamisas(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/camisas`)
   }
+
+  getProduto(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/camisas/${id}`);
+  }
 }

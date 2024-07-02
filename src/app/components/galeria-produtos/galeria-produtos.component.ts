@@ -2,11 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {NavbarComponent} from "../navbar/navbar.component";
 import {CommonModule} from "@angular/common";
 import {ApiService} from "../../services/api.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-galeria-produtos',
   standalone: true,
-  imports: [NavbarComponent, CommonModule],
+  imports: [NavbarComponent, CommonModule, RouterLink],
   templateUrl: './galeria-produtos.component.html',
   styleUrl: './galeria-produtos.component.css'
 })

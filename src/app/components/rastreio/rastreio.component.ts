@@ -6,7 +6,7 @@ import {CommonModule} from "@angular/common";
 @Component({
   selector: 'app-rastreio',
   standalone: true,
-  imports: [NavbarComponent, HttpClientModule, CommonModule],
+  imports: [NavbarComponent, CommonModule],
   templateUrl: './rastreio.component.html',
   styleUrl: './rastreio.component.css'
 })

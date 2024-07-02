@@ -8,8 +8,8 @@
 
 
         <div class="w-full max-w-sm bg-quasebranco rounded-lg">
-          <a href="#">
-            <img class="object-cover w-full rounded-t-lg h-[420px]" src="{{card.foto}}" alt="product image" />
+          <a [routerLink]="['/camisas', card.id]">
+            <img class="object-cover w-full rounded-t-lg h-[420px]" [src]="card.foto" alt="product image" />
           </a>
           <div class="p-5">
             <a href="#">
@@ -37,7 +37,7 @@
             </div>
             <div class="flex items-center justify-between">
               <span class="text-3xl font-bold text-gray-900">R${{card.valor}}</span>
-              <a href="#" class="text-white bg-azulmarinho hover:bg-azulcobalto duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Ver Produto</a>
+              <a [routerLink]="['/camisas', card.id]" class="text-white bg-azulmarinho hover:bg-azulcobalto duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Ver Produto</a>
             </div>
           </div>
         </div>
