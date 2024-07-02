@@ -1,16 +1,25 @@
 <div class="w-full container mx-auto">
   <app-navbar></app-navbar>
-  <div class="flex justify-center h-[80vh] items-center w-full">
+  <div class="flex gap-10 justify-center h-[80vh] px-10 items-center w-full">
     <div class="w-1/2">
       <h1 class="text-4xl font-semibold">Não sabe quando receberá seu pedido?</h1>
       <h2 class="text-xl font-semibold">Insira os dados para calcular o prazo e o preço do frete.</h2>
     </div>
     <div class="w-1/2">
-      <form class="flex flex-col">
-        <span>CEP</span>
-        <input type="text" name="cep" placeholder="Insira seu CEP">4
-        <a href="">Não sei meu CEP</a>
+      <form [formGroup]="form" class="flex flex-col items-start">
+        <span class="font-semibold text-lg">CEP</span>
+        <input class="border mb-2 p-2 w-full rounded" type="text" formControlName="cep" placeholder="Insira seu CEP">
+        <span class="font-semibold text-lg">N° da casa</span>
+        <input type="text" class="border mb-2 p-2 w-full rounded" placeholder="Insira o número da sua casa">
+        <a class="text-sm underline text-azulmarinho" href="">Não sei meu CEP</a>
+        <button class="bg-azulmarinho hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4" (click)="buscarCep()">Buscar</button>
       </form>
+      <div class="pt-10 absolute" *ngIf="cepData">
+        <p class="font-semibold text-xl">{{cepData.localidade}} - {{cepData.uf}}</p>
+        <p>{{cepData.logradouro}}</p>
+        <h3>Prazo de entrega: <span class="font-semibold">7 a 15 dias corridos.</span></h3>
+        <h3>Valor do frete: <span class="font-semibold text-xl text-azulmarinho">R$15.00</span></h3>
+      </div>
     </div>
   </div>
 </div>
