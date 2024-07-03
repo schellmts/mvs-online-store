@@ -13,16 +13,18 @@
         <p class="font-semibold text-lg">{{'N° da casa' | pipeOpcional}}</p>
         <input type="text" class="border mb-2 p-2 w-full rounded" placeholder="Insira o número da sua casa">
         <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" class="text-sm underline text-azulmarinho">Não sei meu CEP</a>
-        <button class="bg-azulmarinho hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4" (click)="buscarCep()">Buscar</button>
+        <button [ngClass]="{
+        'bg-zinc-200': form.get('cep')?.invalid || form.get('cep')?.pristine,
+        'hover:bg-zinc-200': form.get('cep')?.invalid || form.get('cep')?.pristine}" [disabled]="form.get('cep')?.invalid || form.get('cep')?.pristine" class="bg-azulmarinho hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4" (click)="buscarCep()">Buscar</button>
       </form>
       <app-detalhes-cep [cepData]="cepData" (buscarCepEvent)="buscarCepFilho()"></app-detalhes-cep>
-      <div class="pt-10 flex flex-col gap-4 absolute" *ngIf="cepData">
-        <p class="font-semibold text-xl">{{cepData.localidade}} - {{cepData.uf}}</p>
-        <p>{{cepData.logradouro}}</p>
-        <h3>Prazo de entrega: <span class="font-semibold">7 a 15 dias corridos.</span></h3>
-        <h3>Valor do frete: <span class="font-semibold text-xl text-azulmarinho">R$15.00</span></h3>
-        <a [routerLink]="'/produtos'" class="bg-azulmarinho text-center hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4" (click)="buscarCep()">Voltar aos produtos</a>
-      </div>
+<!--      <div class="pt-10 flex flex-col gap-4 absolute" *ngIf="cepData">-->
+<!--        <p class="font-semibold text-xl">{{cepData.localidade}} - {{cepData.uf}}</p>-->
+<!--        <p>{{cepData.logradouro}}</p>-->
+<!--        <h3>Prazo de entrega: <span class="font-semibold">7 a 15 dias corridos.</span></h3>-->
+<!--        <h3>Valor do frete: <span class="font-semibold text-xl text-azulmarinho">R$15.00</span></h3>-->
+<!--        <a [routerLink]="'/produtos'" class="bg-azulmarinho text-center hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4" (click)="buscarCep()">Voltar aos produtos</a>-->
+<!--      </div>-->
     </div>
   </div>
 </div>
