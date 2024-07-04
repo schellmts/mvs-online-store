@@ -11,7 +11,7 @@ import {Inject, PLATFORM_ID} from "@angular/core";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent,HttpClientModule],
+  imports: [RouterOutlet, NavbarComponent,HttpClientModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [ApiService]
