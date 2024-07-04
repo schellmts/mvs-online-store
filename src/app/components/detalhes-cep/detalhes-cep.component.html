@@ -1,0 +1,7 @@
+<div class="pt-10 flex flex-col gap-4 absolute" *ngIf="cepData">
+  <p class="font-semibold text-xl">{{cepData.localidade}} - {{cepData.uf}}</p>
+  <p>{{cepData.logradouro}}</p>
+  <h3>Prazo de entrega: <span class="font-semibold">7 a 15 dias corridos.</span></h3>
+  <h3>Valor do frete: <span class="font-semibold text-xl text-azulmarinho">R$15.00</span></h3>
+  <a [routerLink]="'/produtos'" class="bg-azulmarinho text-center hover:bg-azulcobalto duration-300 p-2 text-white font-semibold rounded-lg mt-4">Voltar aos produtos</a>
+</div>
