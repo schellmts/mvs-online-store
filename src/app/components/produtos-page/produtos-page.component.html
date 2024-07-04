@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div *ngIf="product" class="flex justify-center mx-auto max-w-screen-lg text-lg">
-    <div class="w-16 md:w-1/2 hidden md:block">
+<div *ngIf="product" class="px-10 md:flex-row flex-col-reverse flex justify-center mx-auto max-w-screen-lg text-lg">
+    <div class="w-full md:w-1/2">
       <div class="my-2 font-semibold text-2xl">
          Camisas - Futebol
       </div>
@@ -53,7 +53,7 @@
           <a href="/frete" class="text-azulcobalto">Ver datas de entrega</a>
         </div>
       </div>
-      <button class="bg-azulmarinho hover:bg-azulcobalto text-brancoverdeado font-bold py-2 px-8 rounded-xl my-4 ">Adicionar ao Carrinho</button>
+      <button (click)="enviarDados()" class="bg-azulmarinho hover:bg-azulcobalto text-brancoverdeado font-bold py-2 px-8 rounded-xl my-4 ">Adicionar ao Carrinho</button>
 
       <div class="my-4 text-base flex-col">
         <h1 class="text-xl font-semibold">Na Dúvida?</h1>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="w-16 md:w-1/2 mt-10 hidden md:block">
+    <div class="w-full md:w-1/2 mt-10">
       <div class="card m-8 lg ">
         <img class="h-96 w-72 ml-16 object-cover rounded-3xl" id="mainImage" [src]="product.foto" alt="Imagem Principal">
       </div>
@@ -77,91 +77,7 @@
           <img class="h-16 w-16 m-2 object-cover" [src]="product.foto">
           <img class="h-16 w-16 m-2 object-cover" [src]="product.foto">
           <img class="h-16 w-16 m-2 object-cover" [src]="product.foto">
-        <div class="sm:flex flex-col md:hidden">
-      <div class="my-1 font-semibold text-xl">
-        Camisas - Futebol
-     </div>
-     <!-- Departamento -->
-
-     <div class="text-azulmarinho text-2xl font-medium">Novo</div>
-     <!-- só aparece se for "new" -->
-
-     <div class="top-4 text-2xl font-medium">Camisa Sortida 23/24 - Casa</div>
-     <!-- Nome do produto -->
-     <div class="flex flex-col my-2 text-2xl">
-       <div class="font-medium">R$300,00</div>
-       <p class="text-azulcobalto text-sm">Em até 12x de R$28,90</p>
-       <div class="text-sm">R$ 270,00 à vista(10% de desconto)</div>
-     </div>
-
-     <div class="card m-8 lg ">
-      <img class="h-80 w-72 object-cover rounded-3xl" id="mainimage" src="../../../assets/image 4.png" alt="Imagem Principal">
-    </div>
-
-    <div class="thumbnails grid grid-cols-3 gap-2">
-      <button onclick="document.getElementById('mainimage').src='../../../assets/camisa real madrid.png'">
-        <img class="h-16 w-16 m-2 object-cover" src="../../../assets/camisa real madrid.png">
-      </button>
-      <button onclick="document.getElementById('mainimage').src='../../../assets/image 7.png'">
-        <img class="h-16 w-16 m-2 object-cover" src="../../../assets/image 7.png">
-      </button>
-      <button onclick="document.getElementById('mainimage').src='../../../assets/image 6.png'">
-        <img class="h-16 w-16 m-2 object-cover" src="../../../assets/image 6.png">
-      </button>
-      <button onclick="document.getElementById('mainimage').src='../../../assets/image 5.png'">
-        <img class="h-16 w-16 m-2 object-cover" src="../../../assets/image 5.png">
-      </button>
-      <button onclick="document.getElementById('mainimage').src='../../../assets/image 4.png'">
-        <img class="h-16 w-16 m-2 object-cover" src="../../../assets/image 4.png">
-      </button>
-    </div>
-
-    <fieldset class="my-4 font-medium flex-col">
-      <legend>Tamanho - </legend>
-      <div class="flex flex-row">
-      <div class="m-3">
-          <input type="radio" id="P" name="interest" value="P" />
-          <label for="P">P</label>
       </div>
-      <div class="m-3">
-          <input type="radio" id="M" name="interest" value="M" />
-          <label for="M">M</label>
-      </div>
-      <div class="m-3">
-        <input type="radio" id="G" name="interest" value="G" />
-        <label for="G">G</label>
     </div>
-    </div>
-    <div class="flex flex-row">
-    <div class="m-3">
-      <input type="radio" id="GG" name="interest" value="GG" />
-      <label for="GG">GG</label>
-  </div>
-  <div class="m-3">
-    <input type="radio" id="XG" name="interest" value="XG" />
-    <label for="XG">XG</label>
 </div>
-</div>
-  </fieldset>
-    <div class="flex flex-row">
-      <i class='bx bxs-truck' id="truck"></i>
-      <div class="flex flex-col text-sm">
-        <div class="font-semibold">Entrega:</div>
-        <div>Em estoque</div>
-        <div>Frete grátis</div>
-        <button class="text-azulcobalto">Ver datas de entrega</button>
-      </div>
-    </div>
-    <button class="bg-azulmarinho hover:bg-azulcobalto text-brancoverdeado font-bold py-2 px-8 rounded-xl my-4 ">Adicionar ao Carrinho</button>
-    .
-    <div class="my-4 text-base flex-col">
-      <h1 class="text-xl font-semibold">Na Dúvida?</h1>
-      <div>Salve na lista de desejos para não esquecer e ter que procurar novamente entre as camisas de cada ano.</div>
-      <div class="flex-row">
-        <i class='bx bx-bookmark-plus'></i>
-        <button class="text-azulcobalto">Salvar para mais tarde</button>
-      </div>
-    </div>
-    </div>
-  </div>
 
