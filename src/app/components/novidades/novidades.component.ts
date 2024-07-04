@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
-import { register } from 'module';
-import Swiper from 'swiper';
-register
-Swiper
+import {Component, input, OnInit} from '@angular/core';
+import {ApiService} from "../../services/api.service";
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 @Component({
   selector: 'app-novidades',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './novidades.component.html',
-  styleUrl: './novidades.component.css'
+  styleUrl: './novidades.component.css',
 })
-export class NovidadesComponent {
+export class NovidadesComponent implements OnInit{
+  camisas: any[] = []
 
+  constructor(private apiServce: ApiService) {}
+
+  ngOnInit() {
+    this.apiServce.getCamisas().subscribe(data => {
+      this.camisas = data;
+    });
+
+  }
+
+  protected readonly ApiService = ApiService;
 }
